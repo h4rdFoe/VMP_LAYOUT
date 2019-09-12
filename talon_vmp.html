@@ -172,6 +172,24 @@
     </div>
 </div>
 
+<!-- Окно редактирования метки -->
+<div id="red_metka" class="modal">
+  <div class="modal-content">
+        <h6>Редактирование метки</h6>
+        <hr>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="metka" class="materialize-textarea">Текст метки</textarea>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">Отмена</a>
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">Сохранить</a>
+        </div>
+    </div>
+</div>
+
 <!-- Окно история -->
 <div id="history" class="modal modal-fixed-footer">
   <div class="modal-content">
@@ -276,6 +294,47 @@
     </div>
 </div>
 
+<!-- Комментарии -->
+<div id="ticket_comment" class="modal modal-fixed-footer">
+   <div class="modal-content">
+         <h6>Комментарии</h6>
+         <hr>
+         <div class="row">
+             <form class="col s12">
+               <table class="responsive-table">
+                  <thead>
+                     <tr>
+                        <th>Этап</th>
+                        <th>Время</th>
+                        <th>Пользователь</th>
+                        <th>Комментарий</th>
+                     </tr>
+                  </thead>
+
+                  <tbody>
+                     <tr>
+                        <td>2</td>
+                        <td>21.01.2018 11:55</td>
+                        <td>Петров П.П.</td>
+                        <td>Большой комментарий, сохраненный ранее</td>
+                     </tr>
+                     <tr>
+                        <td>1</td>
+                        <td>21.01.2018 09:55</td>
+                        <td>Иванов И.И.</td>
+                        <td>Большой комментарий, сохраненный ранее</td>
+                     </tr>
+                  </tbody>
+               </table>
+             </form>
+          </div>
+         </div>
+         <div class="modal-footer">
+             <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">ОК</a>
+         </div>
+     </div>
+ </div>
+
 <div class="row content container">
     <div class="row">
         <div id="main-info" class="z-depth-2 vmp_content col push-card l9 s12" style="padding:0">
@@ -296,7 +355,7 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <label>Пациент</label>
-                            <input disabled placeholder="Петров Петр Петрович (999-999-999 03)" type="text">
+                            <input class="tooltipped" data-position="bottom" data-tooltip="Перейти в карту пациента"  placeholder="Петров Петр Петрович (999-999-999 03)" type="text" style="cursor: pointer;">
                         </div>
                     </div>
                     <div class="row">
@@ -310,14 +369,12 @@
                             <label>Страховая компания</label>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="num_pol" type="text">
+                     <div class="row">
+                        <div class="input-field col s12 m6 l6">
+                          <input id="num_pol" type="text">
                             <label for="num_pol">Номер полиса</label>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l6">
                             <select>
                             <option value="" disabled selected>Выберите государство</option>
                             <option value="1">Гос-1</option>
@@ -354,41 +411,45 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
-                            <input id="phone" type="text">
-                            <label for="phone">Контактный телефон</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l6">
                             <input id="email" type="email" class="validate">
                             <label for="email">Email</label>
                             <span class="helper-text">info@gmail.com</span>
                         </div>
+                       <div class="input-field col l6 m6 s12">
+                            <input class="validate" required id="phone" type="text">
+                            <label for="phone">Контактный телефон <span class="red-text"></span></label>
+                            <span class="helper-text" data-error="Номер телефона введен некорректно"></span>
+                         </div> 
                     </div>
                     <div class="row">
-                        <div class="input-field col s11">
-                            <select>
-                            <option selected value="1">Да</option>
-                            <option value="2">Нет</option>
-                            </select>
-                            <label>Согласие на использование персональных данных</label>
+                         <div class="switch col l5 m5 s12" style="margin-top: -7px;">
+                             <label style="line-height: 2.5; margin-top: -10px">
+                                <span style="font-size: 0.9rem; color: gray">Согласие на использование персональных данных</span>
+                                <br>
+                                <span style="color: black">Нет</span>
+                                <input checked type="checkbox">
+                                <span class="lever"></span>
+                                <span style="color: black">Да</span>
+                             </label>
+                         </div>
+                         <div class="col s1 m1">
+                             <a class="tooltipped" data-tooltip="Скачать документ" href=""><i style="margin-left: -62px; margin-top: 28px" class="material-icons small">insert_drive_file</i></a>
+                          </div>
+                         <div class="input-field col s12 l6 m6">
+                            <input disabled placeholder="0 - ОУЗ" id="napr" type="text">
+                            <label for="napr">Направление на ВМП</label>
                         </div>
-                        <div class="input-field col s1">
-                            <a class="tooltipped" data-tooltip="Скачать документ" href="#!"><i class="material-icons small">insert_drive_file</i></a>
-                        </div>
-                    </div>
+                      </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l6">
                             <select>
                             <option selected value="1">0 - Не имеет льгот</option>
                             <option value="2">1 - Инвалид</option>
                             </select>
                             <label>Категория льготы</label>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l6">
                             <select>
                             <option selected value="1">1 - Дошкольник</option>
                             <option value="2">2 - Взрослый</option>
@@ -397,23 +458,12 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div id="time" class="input-field col s12 m6 l6 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: с 1 января текущего года по текущую дату" >
                             <input required id="zajav_date" type="text" class="datepicker validate">
                             <label for="zajav_date">Дата оформления талона <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <select>
-                            <option selected value="1">Первичное</option>
-                            <option value="2">Вторичное</option>
-                            </select>
-                            <label>Обращение за ВМП</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6">
                             <select>
                             <option selected value="1">1 - Федеральный бюджет</option>
                             <option value="2">2 - Субсидии федерального бюджета + бюджет субъекта РФ</option>
@@ -422,18 +472,6 @@
                             <option value="5">5 - Платное</option>
                             </select>
                             <label>Источник финансирования</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input disabled placeholder="0 - ОУЗ" id="napr" type="text">
-                            <label for="napr">Направление</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input disabled placeholder="0 - ОУЗ" id="napr_org" type="text">
-                            <label for="napr_org">Орган, направивший пациента на ВМП</label>
                         </div>
                     </div>
                     <div class="row">
@@ -457,7 +495,7 @@
             <div id="1_etap" class="col s12">
                 <form class="col s12">
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l12 xl6">
                             <select>
                             <option value="1" selected>1 - Наличие показаний на оказание ВМП</option>
                             <option value="2">2 - Отсутствие медицинских показаний для оказания ВМП</option>
@@ -465,16 +503,14 @@
                             </select>
                             <label>Принятое решение</label>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div id="time" class="input-field col s12 m6 l12 xl6 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: год оформления талона или<br> год оформления талона - 1, но не более текущей даты">
                             <input required id="date_resh" type="text" class="datepicker validate">
                             <label for="date_resh">Дата принятия решения <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6">
                             <select>
                             <option value="" disabled selected>Выберите диагноз</option>
                             <optgroup label="A15 Что-то там">
@@ -488,9 +524,7 @@
                             </select>
                             <label>Диагноз по МКБ-10 <span class="red-text">*</span></label>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6">
                             <select>
                             <option value="" disabled selected>Выберите профиль</option>
                             <option value="1" >01.00 Абдоминальная хирургия</option>
@@ -501,7 +535,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6">
                             <select>
                             <option value="" disabled selected>Выберите группу</option>
                             <option value="1">1</option>
@@ -509,9 +543,7 @@
                             </select>
                             <label>Группа <span class="red-text">*</span></label>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6">
                             <select>
                             <option value="" disabled selected>Выберите вид</option>
                             <option value="1">1 вид</option>
@@ -521,7 +553,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6">
                             <select>
                             <option value="" disabled selected>Выберите модель</option>
                             <option value="1">Модель 1</option>
@@ -529,9 +561,7 @@
                             </select>
                             <label>Модель <span class="red-text">*</span></label>        
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6">
                             <select>
                             <option value="" disabled selected>Выберите метод</option>
                             <option value="1">Метод 1</option>
@@ -551,7 +581,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div id="time" class="input-field col s12 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: год оформления талона или год оформления<br> талона - 1, но не более текущей даты и не ранее даты принятия решения">
                             <input required id="date_napr_doc" type="text" class="datepicker validate">
                             <label for="date_napr_doc">Дата направления документов в МО <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>
@@ -582,20 +612,18 @@
             <div id="2_etap" class="col s12">
                 <form class="col s12">
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div id="time" class="input-field col s12 m6 l12 xl6 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: год направления документов<br> в МО, но не ранее даты направления и не более текущей даты">
                             <input required id="date_doc_from_ouz" type="text" class="datepicker validate">
                             <label for="date_doc_from_ouz">Дата получения документов от ОУЗ <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div id="time1" class="input-field col s12 m6 l12 xl6 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: год оформления<br> талона, но не более текущей даты">
                             <input id="date_registration_docs" type="text" class="datepicker">
                             <label for="date_registration_docs">Дата оформления документов МО-ВМП</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l12 xl6">
                             <select>
                             <option value="1" selected>1 - Наличие показаний на оказание ВМП</option>
                             <option value="2">2 - Отсутствие медицинских показаний для оказания ВМП</option>
@@ -603,9 +631,7 @@
                             </select>
                             <label>Принятое решение</label>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div id="time" class="input-field col s12 m6 l12 xl6 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: год оформления талона,<br> но не ранее даты оформления, и не более текущей даты">
                             <input required id="decis_date" type="text" class="datepicker validate">
                             <label for="decis_date">Дата принятия решения <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>
@@ -622,14 +648,12 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div id="time" class="input-field col s12 m6 l12 xl6 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: год оформления талона, но не<br> ранее даты принятия решения (2 этап) и не более текущей даты">
                             <input required id="plan_date_hosp" type="text" class="datepicker validate">
                             <label for="plan_date_hosp">Дата планируемой госпитализации <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l12 xl6">
                             <select>
                             <option  value="1">Да</option>
                             <option selected value="2">Нет</option>
@@ -638,20 +662,12 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
-                            <input id="date_ots_gosp" type="text" class="datepicker">
-                            <label for="date_ots_gosp">Дата отсроченной госпитализации</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div id="time" class="input-field col s12 m6 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: год должен<br> совпадать с годом оформления талона">
                             <input required id="date_send_to_ouz" type="text" class="datepicker validate">
                             <label for="date_send_to_ouz">Дата уведомления ОУЗ и пациента о дате госпитализации в МО <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 ">
                             <select>
                             <option  value="1">1 - Почтой</option>
                             <option  value="2">2 - Телефонограммой</option>
@@ -687,6 +703,17 @@
             <div id="3_etap" class="col s12">
                 <form class="col s12">
                     <div class="row">
+                        <div class="input-field col xl6 l8 m7 s8 ">
+                            <input disabled value="Авг 12, 2019" required id="date_talons_way" type="text" class="datepicker validate">
+                            <label for="date_talons_way">Необходимо согласовать дату госпитализации <span class="red-text ">*</span></label>
+                            <span class="helper-text" data-error="Выберите дату"></span>     
+                        </div>
+                        <div class="input-field col xl6 l4 m5 s4">
+                        <a onclick="M.toast({html: 'Дата согласована'})" class="btn-floating btn-small waves-effect waves-light green tooltipped" data-position="bottom" data-tooltip="Согласовать" style="margin-left: 0px;"><i class="material-icons">check</i></a>
+                        <a onclick="M.toast({html: 'Дата не согласована'})" class="btn-floating btn-small waves-effect waves-light green tooltipped" data-position="bottom" data-tooltip="Отклонить" style="margin-left: 10px;"><i class="material-icons">close</i></a>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="input-field col s12">
                             <select>
                             <option  value="1">Да</option>
@@ -696,44 +723,35 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div id="time" class="input-field col s12 m6 l6 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: год оформления талона, но не<br> ранее даты принятия решения (2 этап) и не более текущей даты">
                             <input required id="date_talons_way" type="text" class="datepicker validate">
                             <label for="date_talons_way">Дата выдачи талонов на проезд для отдельных категорий граждан <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l6">
                             <input required class="validate" id="way_talon_nums" type="text">
                             <label for="way_talon_nums">Номер талона на проезд <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Введите номер талона"></span>
                         </div>
                     </div>
+                    <div class="row"> 
+                    </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l12 xl6">
                             <select>
                             <option  value="1">Да</option>
                             <option selected value="2">Нет</option>
                             </select>
                             <label>Нуждается в сопровождении</label>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l12 xl6">
                             <input required class="validate" id="fio_attend" type="text">
                             <label for="fio_attend">ФИО сопровождающего лица <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Введите ФИО"></span>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
-                            <input required id="date_obr_pat" type="text" class="datepicker validate">
-                            <label for="date_obr_pat">Дата обращения пациента в МО (МО) (согласовано с МО (МО)) <span class="red-text">*</span></label>
-                            <span class="helper-text" data-error="Выберите дату"></span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 ">
                             <textarea id="comment_2" class="materialize-textarea"></textarea>
                             <label for="comment_2">Комментарий</label>
                         </div>
@@ -750,20 +768,14 @@
                     <div class="row">
                         <a onclick="M.toast({html: 'Этап сохранён'})" class="waves-effect waves-light btn-small green">Сохранить</a>
                         <a href="#export" class="modal-trigger waves-effect waves-light btn-small green">Экспорт</a>
+                        <a class="waves-effect waves-light btn-small green">Талон на проезд</a>
                         <a href="#addfile" class="modal-trigger waves-effect waves-light btn-small green">Прикрепить документ</a>
-                        <a onclick="M.toast({html: 'Согласовано'})" class="tooltipped waves-effect waves-light btn-small green" data-tooltip="Согласовать дату госпитализации">Согласовать</a>
                     </div>
                 </form>
             </div>
             <div id="4_etap" class="col s12">
                 <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input required id="date_pat_mu" type="text" class="datepicker validate">
-                            <label for="date_pat_mu">Дата обращения пациента в МО <span class="red-text">*</span></label>
-                            <span class="helper-text" data-error="Выберите дату"></span>
-                        </div>
-                    </div>
+                    
                     <div class="row">
                         <div class="input-field col s12">
                             <select>
@@ -775,7 +787,12 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div id="time" class="input-field col s12 m6 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: год оформления талона,<br> но не ранее даты оформления и не более текущей даты">
+                            <input required id="date_pat_mu" type="text" class="datepicker validate">
+                            <label for="date_pat_mu">Дата обращения пациента в МО <span class="red-text">*</span></label>
+                            <span class="helper-text" data-error="Выберите дату"></span>
+                        </div>
+                        <div class="input-field col s12 m6">
                             <input required class="validate" id="clinic_otdel" type="text">
                             <label for="clinic_otdel">Госпитализирован в отделение <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Введите отделение"></span>
@@ -808,14 +825,12 @@
             <div id="5_etap" class="col s12">
                 <form class="col s12">
                     <div class="row">
-                        <div class="input-field col s12">
-                            <input required id="date_patient_out" type="text" class="datepicker validate">
+                        <div id="time" class="input-field col s12 m6 l6 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: год оформления талона<br> или год даты оформления талона +1, но не ранее даты<br> обращения пациента в МО и не более текущей даты">
+                            <input required id="date_patient_out" type="text" class="datepicker validate ">
                             <label for="date_patient_out">Дата выписки пациента из МО <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l6">
                             <select>
                             <option value="1" selected>1 - ВМП оказана</option>
                             <option value="2">2 - ВМП не оказана по причине добровольного отказа пациента от ВМП</option>
@@ -825,7 +840,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l6">
                             <select>
                             <option value="" disabled selected>Выберите диагноз</option>
                             <optgroup label="A15 Что-то там">
@@ -839,9 +854,7 @@
                             </select>
                             <label>Диагноз при выписке по МКБ-10 <span class="red-text">*</span></label>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l6 ">
                             <select>
                             <option value="" disabled selected>Выберите вид</option>
                             <option value="1">1 вид</option>
@@ -851,7 +864,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l6">
                             <select>
                             <option value="" disabled selected>Выберите модель</option>
                             <option value="1">Модель 1</option>
@@ -859,9 +872,7 @@
                             </select>
                             <label>Модель <span class="red-text">*</span></label>        
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l6">
                             <select>
                             <option value="" disabled selected>Выберите метод</option>
                             <option value="1">Метод 1</option>
@@ -871,7 +882,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l12 xl6">
                             <select>
                             <option value="" disabled selected>Выберите вид</option>
                             <option value="1">1 вид</option>
@@ -879,16 +890,14 @@
                             </select>
                             <label>Вид оказаной ВМП (дополнительный)</label>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div id="time" class="input-field col s12 m6 l12 xl6 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: год оформления<br> талона или год даты оформления талона +1, но не<br> ранее даты госпитализации и не более текущей даты">
                             <input required id="date_oper" type="text" class="datepicker validate">
                             <label for="date_oper">Дата проведения оперативного вмешательства <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l6">
                             <select>
                             <option selected value="1">1 - Выздоровление</option>
                             <option value="2">2 - Улучшение</option>
@@ -898,14 +907,29 @@
                             </select>
                             <label>Результат госпитализации (п. 24.1 ф. N 066/у-02)</label>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l6">
                             <select>
                             <option selected value="1">Медицинская реабилитация</option>
                             <option value="2">Повторная госпитализация для оказания ВМП</option>
                             </select>
                             <label>Рекомендовано</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12 m6 l6">
+                            <select>
+                            <option selected value="1">Оплачен</option>
+                            <option value="2">Не оплачен</option>
+                            </select>
+                            <label>Оплата</label>
+                        </div>
+                        <div class="input-field col s12 m6 l6">
+                            <select>
+                            <option value="" disabled selected>Выберите причину</option>
+                            <option value="1">Первая причина</option>
+                            <option value="2">Вторая причина</option>
+                            </select>
+                            <label>Причина отказа в оплате</label>
                         </div>
                     </div>
                     <div class="row">
@@ -948,16 +972,14 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s12">
+                        <div class="input-field col s12 m6 l12 xl6">
                             <select>
                             <option selected value="1">1 - В медицинской организации</option>
                             <option value="2">2 - В санаторно-курортном учреждении</option>
                             </select>
                             <label>Реабилитация после оказания ВМП</label>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
+                        <div id="time" class="input-field col s12 m6 l12 xl6 tooltipped" data-position="bottom" data-tooltip="Год оформления талона, но не более текущей даты">
                             <input required id="decis_date_6" type="text" class="datepicker validate">
                             <label for="decis_date_6">Дата принятия решения о реабилитации <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>
@@ -1001,7 +1023,7 @@
                     <span class="card-title">Дополнительная информация</span>
                     <label class="card_label_text">Пациент</label>
                     <p class="fs1">
-                        <a href="#!to_patient" class="white-text">
+                        <a href="#!to_patient" class="white-text" >
                             Петров Петр Петрович, СНИЛС: 999-888-777 03
                         </a>
                     </p>
@@ -1017,9 +1039,9 @@
                         <b>01.04.2019</b>
                     </p>
                     <label class="card_label_text">Метка</label>
-                    <p class="fs1">
-                        Тут короче какая то метка
-                    </p>
+                    <a href="#red_metka" class="modal-trigger white-text"><p class="fs1">
+                        dd.mm.yyyy: Текст метки
+                    </p></a>
                     <label class="card_label_text">Дата обращения пациента в МО</label>
                     <p class="fs1">
                         15.02.2019
@@ -1053,31 +1075,40 @@
                     <label class="card_label_text">Объемы</label>
                     <p class="fs1">Плановый объем по выбранной группе: 29 чел., на лечении: 0 чел., ЛО: 0 чел.</p>
                     <label class="card_label_text">Комментарии</label>
-                    <p class="fs1"> 
-                        ФИО пользователя: Большой комментарий, сохраненный ранее 1
-                        <br>
-                        ФИО пользователя: Большой комментарий, сохраненный ранее 2
-                    </p>
+                      <p class="fs1">
+                          <a href="#ticket_comment" class="yellow-text modal-trigger">
+                            Открыть
+                          </a>
+                      </p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="ias_footer">
+<div class="ias_footer hide-on-med-and-down">
   <div>
-      <div>
-          <div style="padding:5px; text-align: right;">
-            <span class="white-text fs1">
+      <div class="row" style="margin-bottom: 0">
+          <div class="col s6 right" style="text-align: right; margin: auto">
+            <span class="white-text" style="vertical-align: middle">
               Служба поддержки: 8-800-500-74-78 (по России)<br>
               Обращение в тех. поддержку:
-              <a href="mailto:egisz@rt-eu.ru">
+              <a class="alink" href="mailto:egisz@rt-eu.ru">
               egisz@rt-eu.ru
               </a>  |   
-              <a href="https://support.egisz.rosminzdrav.ru" target="_blank">
+              <a class="alink" href="https://support.egisz.rosminzdrav.ru" target="_blank">
                 ЕГИСЗ.РФ
               </a>
               <br> © 2016-2019 Министерство здравоохранения Российской Федерации
+            </span>
+          </div>
+          <div class="col s6">
+            <span style="vertical-align:middle">
+              <a href="https://support.egisz.rosminzdrav.ru/index.php?/Knowledge/List/Index/62" target="_blank" class="alink">Описание системы</a>
+              <br>
+              <a href="https://support.egisz.rosminzdrav.ru/index.php?/Knowledge/List/Index/70" target="_blank" class="alink">Часто задоваемые вопросы</a>
+              <br>
+              <a href="https://portal.egisz.rosminzdrav.ru/materials" target="_blank" class="alink">Нормативно-правовые документы и руководства пользователя</a>
             </span>
           </div>
         </div>

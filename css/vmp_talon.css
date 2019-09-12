@@ -45,7 +45,7 @@ i.tiny {
 }
 
 .tabs .tab a:focus, .tabs .tab a:focus.active {
-  background-color: #e8f5e9;
+  background-color: mediumaquamarine;
 }
 
 .tabs .tab a:hover, .tabs .tab a.active {
@@ -167,6 +167,10 @@ body {
     margin-right: 5px;
   }
 
+  .double-width {
+    width: 370px !important;
+  }
+
   @media only screen and (max-width: 993px) {
     .container {
       width: 100%;
@@ -220,4 +224,9 @@ transition: 0.1s linear; /* Цвет текста */
  
 .alink_logo:hover {
 color: #2196f3; /* Цвет текста */
+}
+
+.info_icon {
+  margin-top: 15px;
+  color: grey;
 }

@@ -23,8 +23,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('#time');
+  var instances = M.Tooltip.init(elems,{
+    outDuration: 0,
+    margin: -30
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('#time1');
+  var instances = M.Tooltip.init(elems,{
+    outDuration: 0,
+    margin: -11
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.modal');
-  var instances = M.Modal.init(elems);
+  var instances = M.Modal.init(elems)
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('#error_save');
+  var instances = M.Modal.init(elems, {
+    startingTop: '35%',
+    endingTop: '35%'
+  });
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -49,12 +73,10 @@ $(function() {
   });
 });
 
-
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.fixed-action-btn');
   var instances = M.FloatingActionButton.init(elems);
 });
-
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.fixed-action-btn');

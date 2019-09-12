@@ -115,7 +115,7 @@
 </div>
 
 <!-- Инфо о дубле -->
-<div id='double' class='dropdown-content' style="padding: 5px">
+<div id='double' class='double-width dropdown-content'>
     <span>Пациент с данным СНИЛС уже существует в системе:</span>
     <!-- Возможно, данный пациент уже существует в системе: -->
     <br>
@@ -259,10 +259,13 @@
             <label for="ser_doc">Серия документа <span class="red-text">*</span></label>
             <span class="helper-text" data-error="Введите серию"></span>
           </div>
-          <div class="input-field col l4 s12">
+          <div class="input-field col l3 s12">
             <input class="validate" required id="num_doc" type="text">
             <label for="num_doc">Номер документа <span class="red-text">*</span></label>
             <span class="helper-text" data-error="Введите номер"></span>
+          </div>
+          <div class="input-field col l1 s12">
+            <i class="material-icons small info_icon right">info_outline</i>
           </div>
         </div>
         <div class="row">
@@ -277,6 +280,7 @@
         </div>
       </form>
     </div>
+    <p style="color:grey" class="center">Обращаем Ваше внимание на то, что при указании серии и номера документа символ '№' не вводится. Для иностранных документов и свидетельства о рождении при вводе римских цифр используйте заглавные латинские буквы (I, V, X).</p>
   </div>
   <div class="modal-footer">
     <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">Отмена</a>
@@ -284,88 +288,101 @@
   </div>
 </div>
 
+<!-- Окно ошибки при сохранении -->
+<div id="error_save" class="modal">
+  <div class="modal-content">
+        <i class="material-icons left red-text small">warning</i>
+        <h5 style="margin-top: 0px;">Ошибка</h5>
+        <hr>
+        <p align="justify" style="margin-top: 40px; font-size: 13pt; color: #000000; ">Невозможно сохранить карту с двумя одинаковыми документами, удостоверяющими личность.</p>
+  </div> 
+  <div class="modal-footer" >
+    <a href="#!" class="middle modal-close waves-effect waves-green btn-flat green text-primary" style="margin-right: 15px;" >ок</a>
+  </div>
+</div>
+
 <!-- Окно история -->
 <div id="card_history" class="modal modal-fixed-footer">
   <div class="modal-content">
-      <h6>История изменений в карте</h6>
-      <hr>
-      <ul class="tabs tabs-fixed-width tab-demo">
-        <li class="tab"><a class="active" href="#pat_history">Пациент</a></li>
-        <li class="tab"><a href="#doc_history">Документы</a></li>
-      </ul>
-      <div class="row" id="pat_history">
-        <table>
-          <tbody>
-          <tr>
-              <td>
-                08.11.2018: пользователь 'AndrosovaSV' cоздал карту
-              </td>
-          </tr>
-          <tr>
-              <td>
-                09.11.2018: пользователь 'AndrosovaSV' изменил Имя с Иван на Федор
-              </td>
-          </tr>
-          <tr>
-              <td>
-                10.11.2018: пользователь 'AndrosovaSV' изменил пол с Мужской на Женский
-              </td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="row" id="doc_history">
-        <ul class="collapsible">
-            <li>
-                <div class="collapsible-header">Паспорт гражданина РФ</div>
-                <div class="collapsible-body">
-                    <table>
-                        <tbody>
-                        <tr>
-                            <td>
-                              08.12.2018: пользователь 'support' добавил документ
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              09.12.2018: пользователь 'support' изменил серю с 1111 на 2222
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                              10.12.2018: пользователь 'support' Изменил номер с 111111 на 222222
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header">Свидетельство о рождении</div>
-                <div class="collapsible-body">
-                  <table>
-                    <tbody>
-                    <tr>
-                        <td>
-                          08.12.2018: пользователь 'support' добавил документ
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                          09.12.2018: пользователь 'support' изменил серию с 1111 на 2222
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                          10.12.2018: пользователь 'support' Изменил номер с 111111 на 222222
-                        </td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
-            </li>
+        <h6>История изменений в карте</h6>
+        <hr>
+        <ul class="tabs tabs-fixed-width tab-demo">
+            <li class="tab"><a class="active" href="#pat_history">Пациент</a></li>
+            <li class="tab"><a href="#doc_history">Документы</a></li>
         </ul>
-      </div>    
+        <div class="row" id="pat_history">
+          <table>
+            <tbody>
+            <tr>
+                <td>
+                  08.11.2018: пользователь 'AndrosovaSV' cоздал карту
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  09.11.2018: пользователь 'AndrosovaSV' изменил Имя с Иван на Федор
+                </td>
+            </tr>
+            <tr>
+                <td>
+                  10.11.2018: пользователь 'AndrosovaSV' изменил пол с Мужской на Женский
+                </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="row" id="doc_history">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">Паспорт гражданина РФ</div>
+                        <div class="collapsible-body">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                      08.12.2018: пользователь 'support' добавил документ
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                      09.12.2018: пользователь 'support' изменил серю с 1111 на 2222
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                      10.12.2018: пользователь 'support' Изменил номер с 111111 на 222222
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">Свидетельство о рождении</div>
+                        <div class="collapsible-body">
+                          <table>
+                            <tbody>
+                            <tr>
+                                <td>
+                                  08.12.2018: пользователь 'support' добавил документ
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                  09.12.2018: пользователь 'support' изменил серию с 1111 на 2222
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                  10.12.2018: пользователь 'support' Изменил номер с 111111 на 222222
+                                </td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                    </li>
+                </ul>
+        </div>
     </div>
     <div class="modal-footer">
         <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">ОК</a>
@@ -375,7 +392,7 @@
 <div class="content row container mobile_margin">
   <div class="row mobile_margin">
     <div id="main-info" class="z-depth-2 vmp_content col push-card l9 s12">
-      <h5 style="text-align: center;">Карта пациента</h5>
+      <h5 style="text-align: center;" class="qwerty">Карта пациента</h5>
       <a href="#card_history" class="modal-trigger right tooltipped" style="margin-top:-40px; margin-right:45px;" data-tooltip="История изменений"><i class="material-icons small">history</i></a>
       <a id="hide-right-info" class="right tooltipped" href="#!" style="margin-top:-40px; margin-right:10px;" data-tooltip="Дополнительная информация"><i class="material-icons small">info_outline</i></a>
       <!-- либо жёлтый цвет иконки о дубле -->
@@ -441,8 +458,9 @@
         </div>
       </div>
       <div class="row">
-          <div class="col s12">
-            <a class="waves-effect waves-light btn-small green">Сохранить</a>
+          <div class="col s12"> 
+            <a class="btn-small waves-effect waves-light green modal-trigger" href="#error_save" >Сохранить</a>
+
             <a href="talon_vmp.html" class="waves-effect waves-light btn-small green">Создать талон</a>
             <a href="#addfile" class="modal-trigger waves-effect waves-light btn-small green">Прикрепить документ</a>
             <a onclick="M.toast({html: 'Карта заблокирована'})" class="waves-effect waves-light btn-small green">Блокировать карту</a>
