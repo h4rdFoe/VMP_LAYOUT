@@ -208,12 +208,12 @@
                                 <tbody>
                                 <tr>
                                     <td>
-                                        Пользователь 'maksimovyg' cоздал талон : 15.02.2019
+                                        15.02.2019, пользователь Иванов И.И. создал карту со статусом "На рассмотрении"
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        15.02.2019, пользователь maksimovyg: Талон был направлен в МО на оказание ВМП
+                                        15.02.2019, пользователь Иванов И.И.: Талон был направлен в МО на оказание ВМП
                                     </td>
                                 </tr>
                                 <tr>
@@ -423,24 +423,20 @@
                          </div> 
                     </div>
                     <div class="row">
-                         <div class="switch col l5 m5 s12" style="margin-top: -7px;">
-                             <label style="line-height: 2.5; margin-top: -10px">
-                                <span style="font-size: 0.9rem; color: gray">Согласие на использование персональных данных</span>
-                                <br>
-                                <span style="color: black">Нет</span>
-                                <input checked type="checkbox">
-                                <span class="lever"></span>
-                                <span style="color: black">Да</span>
-                             </label>
-                         </div>
-                         <div class="col s1 m1">
-                             <a class="tooltipped" data-tooltip="Скачать документ" href=""><i style="margin-left: -62px; margin-top: 28px" class="material-icons small">insert_drive_file</i></a>
-                          </div>
+                        <div style="margin-top:30px" class="switch col s12 l6">
+                                <label>
+                                    <input checked type="checkbox">
+                                    <span class="lever"></span>
+                                </label>
+                                <label>
+                                    <a class="alink tooltipped" data-tooltip="Скачать документ" style="font-size: 1rem">Согласие на использование персональных данных</a>
+                                </label>
+                        </div>
                          <div class="input-field col s12 l6 m6">
                             <input disabled placeholder="0 - ОУЗ" id="napr" type="text">
                             <label for="napr">Направление на ВМП</label>
                         </div>
-                      </div>
+                    </div>
                     <div class="row">
                         <div class="input-field col s12 m6 l6">
                             <select>
@@ -637,7 +633,7 @@
                             <span class="helper-text" data-error="Выберите дату"></span>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" style="margin-bottom: 0px">
                         <div class="input-field col s12">
                             <select>
                             <option value="" disabled selected>Выберите вид</option>
@@ -647,18 +643,20 @@
                             <label>Вид ВМП <span class="red-text">*</span></label>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" style="margin-bottom: 0px">
                         <div id="time" class="input-field col s12 m6 l12 xl6 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: год оформления талона, но не<br> ранее даты принятия решения (2 этап) и не более текущей даты">
                             <input required id="plan_date_hosp" type="text" class="datepicker validate">
                             <label for="plan_date_hosp">Дата планируемой госпитализации <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>
                         </div>
-                        <div class="input-field col s12 m6 l12 xl6">
-                            <select>
-                            <option  value="1">Да</option>
-                            <option selected value="2">Нет</option>
-                            </select>
-                            <label>Необходимо согласовать дату госпитализации</label>
+                        <div style="margin-top: 30px" class="switch col s12 l1">
+                                <label >
+                                    <input style="margin-top: 50px" checked type="checkbox">
+                                    <span class="lever"></span>
+                                </label>
+                        </div>
+                        <div class="switch col s12 l5">
+                            <p style="margin-top: 30px">Нуждается в сопровождении</p>
                         </div>
                     </div>
                     <div class="row">
@@ -702,8 +700,8 @@
             </div>
             <div id="3_etap" class="col s12">
                 <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col xl6 l8 m7 s8 ">
+                    <div class="row" style="margin-bottom:0px">
+                        <div class="input-field col xl3 l3 m7 s8 ">
                             <input disabled value="Авг 12, 2019" required id="date_talons_way" type="text" class="datepicker validate">
                             <label for="date_talons_way">Необходимо согласовать дату госпитализации <span class="red-text ">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>     
@@ -713,19 +711,21 @@
                         <a onclick="M.toast({html: 'Дата не согласована'})" class="btn-floating btn-small waves-effect waves-light green tooltipped" data-position="bottom" data-tooltip="Отклонить" style="margin-left: 10px;"><i class="material-icons">close</i></a>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <select>
-                            <option  value="1">Да</option>
-                            <option selected value="2">Нет</option>
-                            </select>
-                            <label>Талоны на проезд предоставляются</label>
-                        </div>
+                    <div class="row" style="margin-bottom:0px;">
+                            <div class="switch col s12 l1">
+                                    <label >
+                                        <input style="margin-top: 50px" checked type="checkbox">
+                                        <span class="lever"></span>
+                                    </label>
+                            </div>
+                            <div class="switch col s12 l5">
+                                <p style="margin-top:0px">Талоны на проезд предоставляются</p>
+                            </div>
                     </div>
-                    <div class="row">
+                    <div class="row" style="margin-bottom:0px;">
                         <div id="time" class="input-field col s12 m6 l6 tooltipped" data-position="bottom" data-tooltip="Доступный диапазон для выбора: год оформления талона, но не<br> ранее даты принятия решения (2 этап) и не более текущей даты">
-                            <input required id="date_talons_way" type="text" class="datepicker validate">
-                            <label for="date_talons_way">Дата выдачи талонов на проезд для отдельных категорий граждан <span class="red-text">*</span></label>
+                            <input required id="date_get_talons" type="text" class="datepicker validate">
+                            <label for="date_get_talons">Дата выдачи талонов на проезд для отдельных категорий граждан <span class="red-text">*</span></label>
                             <span class="helper-text" data-error="Выберите дату"></span>
                         </div>
                         <div class="input-field col s12 m6 l6">
@@ -734,15 +734,15 @@
                             <span class="helper-text" data-error="Введите номер талона"></span>
                         </div>
                     </div>
-                    <div class="row"> 
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12 m6 l12 xl6">
-                            <select>
-                            <option  value="1">Да</option>
-                            <option selected value="2">Нет</option>
-                            </select>
-                            <label>Нуждается в сопровождении</label>
+                    <div class="row" style="margin-bottom:0px;">
+                        <div style="margin-top: 30px" class="switch col s12 l1">
+                                <label >
+                                    <input style="margin-top: 50px" checked type="checkbox">
+                                    <span class="lever"></span>
+                                </label>
+                        </div>
+                        <div class="switch col s12 l5">
+                            <p style="margin-top: 30px">Нуждается в сопровождении</p>
                         </div>
                         <div class="input-field col s12 m6 l12 xl6">
                             <input required class="validate" id="fio_attend" type="text">
@@ -896,7 +896,7 @@
                             <span class="helper-text" data-error="Выберите дату"></span>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" style="margin-bottom: 0px">
                         <div class="input-field col s12 m6 l6">
                             <select>
                             <option selected value="1">1 - Выздоровление</option>
@@ -915,14 +915,16 @@
                             <label>Рекомендовано</label>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12 m6 l6">
-                            <select>
-                            <option selected value="1">Оплачен</option>
-                            <option value="2">Не оплачен</option>
-                            </select>
-                            <label>Оплата</label>
-                        </div>
+                    <div class="row" style="margin-bottom: 0px">
+                            <div style="margin-top:30px" class="switch col s12 l1">
+                                    <label >
+                                        <input checked type="checkbox">
+                                        <span class="lever"></span>
+                                    </label>
+                            </div>
+                            <div class="switch col s12 l5">
+                                <p style="margin-top:30px">Талон оплачен</p>
+                            </div>
                         <div class="input-field col s12 m6 l6">
                             <select>
                             <option value="" disabled selected>Выберите причину</option>
@@ -956,22 +958,22 @@
             </div>
             <div id="6_etap" class="col s12">
                 <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <select>
-                            <option selected value="1">Да</option>
-                            <option value="2">Нет</option>
-                            </select>
-                            <label>Завершение лечения по ВМП</label>
+                    <div class="row" style="margin-bottom: 0px">
+                        <div style="margin-top:30px" class="switch col s12 l1">
+                                <label >
+                                    <input checked type="checkbox">
+                                    <span class="lever"></span>
+                                </label>
+                        </div>
+                        <div class="switch col s12 l3">
+                            <p style="margin-top:30px">Лечение по ВМП завершено</p>
+                        </div>
+                        <div class="input-field col s12 l8">
+                                <input disabled id="decline" type="text">
+                                <label for="decline">Отказано</label>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input disabled id="decline" type="text">
-                            <label for="decline">Отказано</label>
-                        </div>
-                    </div>
-                    <div class="row">
+                    <div class="row" style="margin-bottom:0px">
                         <div class="input-field col s12 m6 l12 xl6">
                             <select>
                             <option selected value="1">1 - В медицинской организации</option>
@@ -985,13 +987,15 @@
                             <span class="helper-text" data-error="Выберите дату"></span>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <select>
-                            <option value="1">Да</option>
-                            <option selected value="2">Нет</option>
-                            </select>
-                            <label>Проведена реабилитация (восстановительное лечение)</label>
+                    <div class="row" style="margin-bottom: 0px">
+                        <div class="switch col s12 l1">
+                                <label >
+                                    <input checked type="checkbox">
+                                    <span class="lever"></span>
+                                </label>
+                        </div>
+                        <div class="switch col s12 l6">
+                            <p style="margin-top:0px">Проведена реабилитация, восстановительное лечение</p>
                         </div>
                     </div>
                     <div class="row">
