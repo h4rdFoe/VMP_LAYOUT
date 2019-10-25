@@ -167,7 +167,7 @@
         </div>
         <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">Отмена</a>
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">Сохранить</a>
+            <a onclick="M.toast({html: 'Метка сохранена'})" class="modal-close waves-effect waves-green btn-flat green text-primary">Сохранить</a>
         </div>
     </div>
 </div>
@@ -185,7 +185,7 @@
         </div>
         <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">Отмена</a>
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">Сохранить</a>
+            <a onclick="M.toast({html: 'Метка сохранена'})" class="modal-close waves-effect waves-green btn-flat green text-primary">Сохранить</a>
         </div>
     </div>
 </div>
@@ -967,6 +967,21 @@
                         </div>
                         <div class="switch col s12 l3">
                             <p style="margin-top:30px">Лечение по ВМП завершено</p>
+                        </div>
+                        <div class="input-field col s12 l8">
+                                <input disabled id="decline" type="text">
+                                <label for="decline">Отказано</label>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 0px">
+                        <div style="margin-top:30px" class="switch col s12 l1">
+                                <label >
+                                    <input checked type="checkbox">
+                                    <span class="lever"></span>
+                                </label>
+                        </div>
+                        <div class="switch col s12 l3">
+                            <p style="margin-top:30px">Пациент умер</p>
                         </div>
                         <div class="input-field col s12 l8">
                                 <input disabled id="decline" type="text">
