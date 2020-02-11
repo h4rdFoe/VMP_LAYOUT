@@ -218,14 +218,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col s12 l1 input-field">
-                    <label>Отобразить</label>
-                </div>
-                <div class="col s12 l3 input-field">
-                    <select>
-                        <option value="" disabled selected>только выбранные виды</option>
-                        <option value="1">все виды</option>
-                    </select>
+                <div class="col s12 input-field">
+                    <form action="#">
+                        <label>
+                          <input name="group1" type="radio" checked />
+                          <span>отобразить только выбранные виды</span>
+                        </label>
+                        <label>
+                          <input name="group1" type="radio" />
+                          <span>отобразить все виды</span>
+                        </label>
+                    </form>
                 </div>
             </div>
             <div class="row">
