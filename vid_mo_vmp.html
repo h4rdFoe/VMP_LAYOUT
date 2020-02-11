@@ -46,17 +46,26 @@
     <!-- Окно добавления лицензии -->
     <div id="add_lisence" class="modal">
         <div class="modal-content">
-            <form action="#">
-                <div class="file-field input-field">
-                    <div class="btn">
-                        <span>File</span>
-                        <input type="file" multiple>
-                    </div>
-                    <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" placeholder="Прикрепить лицензию">
-                    </div>
+            <div class="row">
+                <div class="input-field col l4 s12">
+                    <!-- Использовать сатурн -->
+                    <input required id="date4" type="text" class="datepicker">
+                    <label for="date4">Дата выдачи лицензии</label>
                 </div>
-            </form>
+            </div>
+            <div class="row">
+                <form action="#">
+                    <div class="file-field input-field">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file" multiple>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Прикрепить лицензию">
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">OK</a>
@@ -244,9 +253,9 @@
                 </div>
             </div>
             <div class="row">
-              <div class="col s12">
-                <a href="#add_lisence" class="modal-trigger waves-effect waves-light btn-small green">Прикрепить лицензию</a>
-              </div>
+                <div class="col s12">
+                    <a href="#add_lisence" class="modal-trigger waves-effect waves-light btn-small green">Прикрепить лицензию</a>
+                </div>
             </div>
         </div>
     </div>
