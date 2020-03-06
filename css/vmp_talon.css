@@ -98,6 +98,17 @@ select:focus {
 color: #1b9881;
 }
 
+.timepicker-digital-display {
+  background-color: #1b9881;
+}
+
+.timepicker-cancel,
+.timepicker-clear,
+.timepicker-today,
+.timepicker-done {
+color: #1b9881;
+}
+
 nav .brand-logo {
   font-size: 1.3rem;
 }
