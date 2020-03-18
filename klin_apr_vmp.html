@@ -20,8 +20,8 @@
     <!-- Окно причины отказа -->
     <div id="reason" class="modal">
         <div class="modal-content">
-		 <h6>Причина отказа утверждения отчета</h6>
-           <hr>
+            <h6>Причина отказа утверждения отчета</h6>
+            <hr>
             <div class="row">
                 <div class="input-field col s12">
                     <textarea id="textarea1" class="materialize-textarea" placeholder="Укажите причину"></textarea>
@@ -38,21 +38,22 @@
     <!-- Окно сообщения -->
     <div id="message" class="modal">
         <div class="modal-content">
-		 <h6>Причина отказа</h6>
-          <hr>
+            <h6>Причина отказа</h6>
+            <hr>
             Есть ошибки.
         </div>
         <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">OK</a>
         </div>
     </div>
-	
-	 <!-- Окно сообщения -->
+
+    <!-- Окно сообщения -->
     <div id="help_message" class="modal">
         <div class="modal-content">
-		 <h6>Справка</h6>
-          <hr>
-            Плановые показатели в отчете отображаются из загруженного в систему государственного задания за указанный отчетный период.
+            <h6>Справка</h6>
+            <hr>
+            Плановые показатели в отчете отображаются из загруженного в систему государственного задания за указанный
+            отчетный период.
         </div>
         <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">OK</a>
@@ -64,8 +65,8 @@
         <div class="modal-content">
             <form action="#">
                 <div class="file-field input-field">
-				  <h6>Добавление документа</h6>
-                   <hr>
+                    <h6>Добавление документа</h6>
+                    <hr>
                     <div class="btn">
                         <span>ВЫБРАТЬ</span>
                         <input type="file" multiple>
@@ -85,8 +86,8 @@
     <!-- Окно удаления документа -->
     <div id="del_document" class="modal">
         <div class="modal-content">
-		 <h6>Предупреждение</h6>
-          <hr>
+            <h6>Предупреждение</h6>
+            <hr>
             Вы уверены, что хотите удалить документ?
         </div>
         <div class="modal-footer">
@@ -94,31 +95,32 @@
             <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">Нет</a>
         </div>
     </div>
-	
-	<!-- Окно экспорта -->
+
+    <!-- Окно экспорта -->
     <div id="export_report" class="modal">
-      <div class="modal-content">
-        <h6>Экспорт отчета</h6>
-        <hr>
-        <div class="row">
-            <div class="input-field col s12">
-                <select multiple>
-                <option selected value="1">xlsx</option>
-                <option value="1">xls</option>
-                </select>
-                <label>Формат для скачивания</label>
+        <div class="modal-content">
+            <h6>Экспорт отчета</h6>
+            <hr>
+            <div class="row">
+                <div class="input-field col s12">
+                    <select multiple>
+                        <option selected value="1">xlsx</option>
+                        <option value="1">xls</option>
+                    </select>
+                    <label>Формат для скачивания</label>
+                </div>
             </div>
         </div>
-      </div>
-      <div class="modal-footer">
+        <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">Отмена</a>
             <a href="#!" class="modal-close waves-effect waves-green btn-flat green text-primary">Скачать</a>
-      </div>
+        </div>
     </div>
 
     <!-- user_bar -->
     <ul id='user' class='dropdown-content'>
-        <li><a href="#!"><i class="material-icons">email</i><span class=" right new badge green" data-badge-caption="4"></span>Уведомления</a></li>
+        <li><a href="#!"><i class="material-icons">email</i><span class=" right new badge green"
+                    data-badge-caption="4"></span>Уведомления</a></li>
         <li><a href="#!"><i class="material-icons">exit_to_app</i>Выйти</a></li>
     </ul>
     <ul id='user-mobile' class='dropdown-content'>
@@ -131,19 +133,13 @@
         <li><a href="#!">Должностные лица и контактная информация</a></li>
         <li><a href="#!">Доступные виды ВМП</a></li>
         <li><a href="#!">Талоны за прошлый год</a></li>
-        <li class="divider" tabindex="-1"></li>
-        <li><a href="#!">Клиническая апробация</a></li>
-        <li><a href="#!">Статус отчетов по клинической апробации</a></li>
-        <li><a href="#!">Информация о выполнении ГЗ в рамках КА</a></li>
+        <li class="active"><a href="#!">Клиническая апробация</a></li>
     </ul>
     <ul id='vvod-mobile' class='dropdown-content'>
         <li><a href="#!">ДЛ и контактная информация</a></li>
         <li><a href="#!">Доступные виды ВМП</a></li>
         <li><a href="#!">Талоны за прошлый год</a></li>
-        <li class="divider" tabindex="-1"></li>
-        <li><a href="#!">Клиническая апробация</a></li>
-        <li><a href="#!">Статус отчетов по КА</a></li>
-        <li><a href="#!">Инфо о выполнении ГЗ КА</a></li>
+        <li><a class="active" href="#!">Клиническая апробация</a></li>
     </ul>
 
     <!-- lech_bar -->
@@ -170,26 +166,36 @@
         <div class="nav-wrapper">
             <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <a href="">
-                <div class="alink_logo tooltipped brand-logo right" data-tooltip="Система мониторинга оказания высокотехнологичной медицинской помощи">
+                <div class="alink_logo tooltipped brand-logo right"
+                    data-tooltip="Система мониторинга оказания высокотехнологичной медицинской помощи">
                     <span>ЕГИСЗ</span>
                     <img class="right logo-egisz" src="img/logo-langing.png">
                 </div>
             </a>
             <ul class="left hide-on-med-and-down">
-                <li><a class="dropdown-trigger" href="#!" data-target="user"><i class="material-icons left">account_box</i>ЦЕНТР Т.П. <i class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a class="dropdown-trigger" href="#!" data-target="vvod">ВВОД ДАННЫХ<i class="material-icons right">arrow_drop_down</i></a></li>
-                <li><a class="dropdown-trigger" href="#!" data-target="lech">ЛЕЧЕНИЕ<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-trigger" href="#!" data-target="user"><i
+                            class="material-icons left">account_box</i>ЦЕНТР Т.П. <i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+                <li class="active"><a class="dropdown-trigger" href="#!" data-target="vvod">ВВОД ДАННЫХ<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-trigger" href="#!" data-target="lech">ЛЕЧЕНИЕ<i
+                            class="material-icons right">arrow_drop_down</i></a></li>
                 <li><a href="">МОНИТОРИНГ</a></li>
-                <li><a href=""><i class="material-icons tooltipped" data-tooltip="АДМИНИСТРИРОВАНИЕ">settings</i></a></li>
-                <li><a href="https://portal.egisz.rosminzdrav.ru/forum/" class="tooltipped" data-tooltip="ФОРУМ" target="_blank"><i class="material-icons small">forum</i></a></li>
+                <li><a href=""><i class="material-icons tooltipped" data-tooltip="АДМИНИСТРИРОВАНИЕ">settings</i></a>
+                </li>
+                <li><a href="https://portal.egisz.rosminzdrav.ru/forum/" class="tooltipped" data-tooltip="ФОРУМ"
+                        target="_blank"><i class="material-icons small">forum</i></a></li>
             </ul>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-nav">
-        <li><a class="dropdown-trigger" href="#!" data-target="user-mobile">ЦЕНТР Т.П.<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a class="dropdown-trigger" href="#!" data-target="vvod-mobile">ВВОД ДАННЫХ<i class="material-icons right">arrow_drop_down</i></a></li>
-        <li><a class="dropdown-trigger" href="#!" data-target="lech-mobile">ЛЕЧЕНИЕ<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="user-mobile">ЦЕНТР Т.П.<i
+                    class="material-icons right">arrow_drop_down</i></a></li>
+        <li class="active"><a class="dropdown-trigger" href="#!" data-target="vvod-mobile">ВВОД ДАННЫХ<i
+                    class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="lech-mobile">ЛЕЧЕНИЕ<i
+                    class="material-icons right">arrow_drop_down</i></a></li>
         <li><a href="">МОНИТОРИНГ</a></li>
         <li><a href="">АДМИНИСТРИРОВАНИЕ</a></li>
         <li><a href="https://portal.egisz.rosminzdrav.ru/forum/" target="_blank">ФОРУМ</a></li>
@@ -198,7 +204,21 @@
     <div class="content row mobile_margin">
         <div class="z-depth-2 vmp_content col l11 s12 push-l0">
             <h5 style="text-align: center;">Клиническая апробация</h5>
-                <div class="input-field col s12">
+            <div class="row">
+                <div class="col s12 l1 input-field">
+                    <select style="margin-bottom: 0px">
+                        <option value="" disabled selected>2020</option>
+                        <option value="1">2015</option>
+                        <option value="2">2016</option>
+                        <option value="3">2017</option>
+                        <option value="4">2018</option>
+                        <option value="5">2019</option>
+                        <option value="6" selected>2020</option>
+                        <option value="7">2021</option>
+                    </select>
+                    <label>Год</label>
+                </div>
+                <div class="input-field col l11 s12">
                     <select>
                         <option value="" disabled selected>Выберите организацию</option>
                         <option value="1">1122 - ГБУЗ ИО "МУ "Многопрофильная клиника", г.Иркутск</option>
@@ -207,19 +227,8 @@
                     </select>
                     <label>Организации</label>
                 </div>
-				<div class="col s12 l3 input-field">
-                    <select style="margin-bottom: 0px">
-                        <option value="" disabled selected>2020</option>
-                        <option value="1">2021</option>
-                        <option value="2">2019</option>
-                        <option value="3">2018</option>
-                        <option value="3">2017</option>
-                        <option value="3">2016</option>
-                        <option value="3">2015</option>
-                    </select>
-                    <label>Год</label>
-                </div>
-				<div class="row">
+            </div>
+            <div class="row">
                 <div class="col s12">
                     <a class="waves-effect waves-light btn-small">Обновить</a>
                 </div>
@@ -227,123 +236,148 @@
             <div class="row">
                 <div class="col s12">
                     <span class="right" style="padding-left: 10px;"><b>Не утверждено</b></span>
-                    <a href="#message" class="modal-trigger tooltipped right" data-tooltip="Причина"><i class="material-icons">message</i></a>
-                </div>
-            </div>
-			<div class="row">
-                <div class="col s12">
-				    <label class="grey-text text-darken-3" style="font-size: 1rem;">Дата обновления: </label><a href="#!" class="black-text">01.03.2020 11:47:00</a>
-				</div>
-            </div>	
-            <div class="row">
-                <div class="col s12">
-				    <a class="waves-effect waves-light btn-small green"><i class="material-icons left">playlist_add_check</i>Сохранить</a>
-                    <a class="waves-effect waves-light btn-small red"><i class="material-icons left">refresh</i>Сбросить</a>
-                    <a class="waves-effect waves-light btn-small green"><i class="material-icons left">done</i>На утверждение</a>
-                    <a class="waves-effect waves-light btn-small green"><i class="material-icons left">edit</i>Редактировать</a>
-					<a href="#export_report" class="modal-trigger waves-effect waves-light btn-small green">Экспорт</a>
-					<a href="#accept" class="waves-effect waves-light btn-small green modal-trigger"><i class="material-icons left">thumb_up</i>Утвердить</a>
-                    <a href="#reason" class="waves-effect waves-light btn-small red modal-trigger"><i class="material-icons left">thumb_down</i>Отказать</a>
-                </div>
-            </div>
-			<ul class="collapsible">
-             <li class="active">
-              <div class="collapsible-header"><i class="material-icons">person</i><b>Ответственные сотрудники</b></div>
-              <div class="collapsible-body">
-				   <div class="row">
-                     <div class="input-field col s3">
-					  <input disabled value="Иванов Иван Иванович" id="first_name2" type="text" class="validate">
-                      <label class="active" for="first_name2">Руководитель федерального медицинского учреждения</label>
-                     </div>
-                   </div>
-				   <div class="row">
-                     <div class="input-field col s3">
-					  <input disabled value="Петров Петр Петрович" id="first_name2" type="text" class="validate">
-                      <label class="active" for="first_name2">Ответственный исполнитель</label>
-                     </div>
-                     <div class="input-field col s5">
-					  <input id="first_name1" type="text" class="validate">
-                      <label class="active" for="first_name1">Должность</label>
-                     </div>
-                     <div class="input-field col s2">
-					  <input id="phone" type="text" class="validate">
-                      <label class="active" for="phone">Телефон</label>
-                     </div>
-                     <div class="input-field col s2">
-					  <input id="email" type="text" class="validate">
-                      <label class="active" for="email">Email</label>
-                     </div>
-				   </div>
-			  </div> 
-             </li>
-			</ul>
-			<ul class="collapsible">
-             <li class="active">
-              <div class="collapsible-header">
-			    <i class="material-icons">library_books</i><b>Отчет о выполнении государственного задания на оказание медицинской помощи в рамках клинической апробации методов профилактики, диагностики, лечения и реабилитации</b>
-			    <a href="#help_message" class="modal-trigger tooltipped left" data-tooltip="Справка"><i class="material-icons">info_outline</i></a>
-			  </div>
-			  <div class="collapsible-body">
-                <div class="row">
-                </div> 
-			    <div class="row">
-                 <div class="col s12">
-                    <table class="responsive-table highlight">
-                        <thead>
-                          <tr>
-                            <th>Индекс протокола клинической апробации</th>
-                            <th>Наименование протокола клинической апробации</th>
-							<th>Утвержденное в государственном задании число пациентов по протоколу</th>
-                            <th>Фактическое число пациентов по протоколу за отчетный год</th>
-							<th>Выполнение государственного задания за отчетный период, в %</th>
-                          </tr>
-                        </thead>
-						<tbody>
-                           <tr>
-                            <td>001-Д</td>
-                            <td>Таргетная индивидуализированная терапия генно-инженерными биологическими препаратами детей с юношеским артритом и аутовоспалительными синдромами с применением секвенирования нового поколения для генетической верификации диагноза</td>
-						    <td class="centered">100</td>
-						    <td class="centered"><input value="100" type="text"></td>
-						    <td class="centered">100</td>
-						   </tr>
-						   <tr>
-                           <td>2016-1-4</td>
-                            <td>Клиническая апробация диагностической тест-системы для оценки потенциала патогенности вирусов гриппа и ОРВИ по цитокиновому профилю,  прогноза развития тяжелых и осложненных форм инфекции</td>
-						    <td class="centered">55</td>
-						    <td class="centered"><input value="55" type="text"></td>
-						    <td class="centered">100</td>
-						   </tr>
-						   <tr>
-                            <td>2017-29-1</td>
-                            <td>Дорсальная фиксация С1-С2 позвонков винтами при атланто-аксиальной дислокации</td>
-						    <td class="centered">88</td>
-						    <td class="centered"><input value="88" type="text"></td>
-						    <td class="centered">100</td>
-						   </tr>
-						   <tr>
-                            <td>2018-45-9</td>
-							<td>Лечение пациентов с приобретенной апластической анемией с применением инновационной схемы комбинированной иммуносупрессивной терапии</td>
-                            <td class="centered">50</td>
-						    <td class="centered"><input type="text"></td>
-						    <td class="centered">%</td>
-						   </tr>
-						</tbody>
-                    </table>
-                </div>  
-            </div>
-			</div>
-			 </li>
-			</ul>
-            <div class="row">
-                <div class="col s12">
-                    <label style="font-size: 1rem;">Документ: </label><a href="#!" class="blue-text">Протокол.docx - 01.03.2020 11:47:00</a>
-					<a href="#del_document"" class="modal-trigger tooltipped" data-tooltip="Нажмите чтобы удалить документ"><i class="material-icons tiny">delete</i></a>
+                    <a href="#message" class="modal-trigger tooltipped right" data-tooltip="Причина"><i
+                            class="material-icons">message</i></a>
                 </div>
             </div>
             <div class="row">
-              <div class="col s12">
-                <a href="#add_document"" class="modal-trigger waves-effect waves-light btn-small green">Прикрепить документ</a>
-              </div>
+                <div class="col s12">
+                    <label class="grey-text text-darken-3" style="font-size: 1rem;">Дата обновления: </label><a
+                        href="#!" class="black-text">01.03.2020 11:47</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <a class="waves-effect waves-light btn-small green"><i
+                            class="material-icons left">playlist_add_check</i>Сохранить</a>
+                    <a class="waves-effect waves-light btn-small red"><i
+                            class="material-icons left">refresh</i>Сбросить</a>
+                    <a class="waves-effect waves-light btn-small green"><i class="material-icons left">done</i>На
+                        утверждение</a>
+                    <a class="waves-effect waves-light btn-small green"><i
+                            class="material-icons left">edit</i>Редактировать</a>
+                    <a href="#export_report" class="modal-trigger waves-effect waves-light btn-small green"><i
+                            class="material-icons left">file_download</i>Экспорт</a>
+                    <a href="#accept" class="waves-effect waves-light btn-small green modal-trigger"><i
+                            class="material-icons left">thumb_up</i>Утвердить</a>
+                    <a href="#reason" class="waves-effect waves-light btn-small red modal-trigger"><i
+                            class="material-icons left">thumb_down</i>Отказать</a>
+                </div>
+            </div>
+            <ul class="collapsible">
+                <li class="active">
+                    <div class="collapsible-header"><i class="material-icons">person</i><b>Ответственные сотрудники</b>
+                    </div>
+                    <div class="collapsible-body">
+                        <div class="row">
+                            <div class="input-field col s3">
+                                <input disabled value="Иванов Иван Иванович" id="first_name2" type="text"
+                                    class="validate">
+                                <label class="active" for="first_name2">Руководитель</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s3">
+                                <input disabled value="Петров Петр Петрович" id="first_name2" type="text"
+                                    class="validate">
+                                <label class="active" for="first_name2">Ответственный исполнитель</label>
+                            </div>
+                            <div class="input-field col s5">
+                                <input id="first_name1" type="text" class="validate">
+                                <label class="active" for="first_name1">Должность</label>
+                            </div>
+                            <div class="input-field col s2">
+                                <input id="phone" type="text" class="validate">
+                                <label class="active" for="phone">Телефон</label>
+                            </div>
+                            <div class="input-field col s2">
+                                <input id="email" type="text" class="validate">
+                                <label class="active" for="email">Email</label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="collapsible">
+                <li class="active">
+                    <div class="collapsible-header">
+                        <i class="material-icons">library_books</i><b>Отчет о выполнении государственного задания на
+                            оказание медицинской помощи в рамках клинической апробации методов профилактики,
+                            диагностики, лечения и реабилитации</b>
+                        <a href="#help_message" class="modal-trigger tooltipped left" data-tooltip="Справка"><i
+                                class="material-icons">info_outline</i></a>
+                    </div>
+                    <div class="collapsible-body">
+                        <div class="row">
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <table class="responsive-table highlight">
+                                    <thead>
+                                        <tr>
+                                            <th>Индекс протокола клинической апробации</th>
+                                            <th>Наименование протокола клинической апробации</th>
+                                            <th>Утвержденное в государственном задании число пациентов по протоколу</th>
+                                            <th>Фактическое число пациентов по протоколу за отчетный год</th>
+                                            <th>Выполнение государственного задания за отчетный период, в %</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>001-Д</td>
+                                            <td>Таргетная индивидуализированная терапия генно-инженерными биологическими
+                                                препаратами детей с юношеским артритом и аутовоспалительными синдромами
+                                                с применением секвенирования нового поколения для генетической
+                                                верификации диагноза</td>
+                                            <td class="centered">100</td>
+                                            <td class="centered"><input value="100" type="text"></td>
+                                            <td class="centered">100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2016-1-4</td>
+                                            <td>Клиническая апробация диагностической тест-системы для оценки потенциала
+                                                патогенности вирусов гриппа и ОРВИ по цитокиновому профилю, прогноза
+                                                развития тяжелых и осложненных форм инфекции</td>
+                                            <td class="centered">55</td>
+                                            <td class="centered"><input value="55" type="text"></td>
+                                            <td class="centered">100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2017-29-1</td>
+                                            <td>Дорсальная фиксация С1-С2 позвонков винтами при атланто-аксиальной
+                                                дислокации</td>
+                                            <td class="centered">88</td>
+                                            <td class="centered"><input value="88" type="text"></td>
+                                            <td class="centered">100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2018-45-9</td>
+                                            <td>Лечение пациентов с приобретенной апластической анемией с применением
+                                                инновационной схемы комбинированной иммуносупрессивной терапии</td>
+                                            <td class="centered">50</td>
+                                            <td class="centered"><input type="text"></td>
+                                            <td class="centered">%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="row">
+                <div class="col s12">
+                    <label style="font-size: 1rem;">Документ: </label><a href="#!" class="blue-text">Протокол.docx -
+                        01.03.2020 11:47</a>
+                    <a href="#del_document"" class=" modal-trigger tooltipped"
+                        data-tooltip="Нажмите чтобы удалить документ"><i class="material-icons tiny">delete</i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <a href="#add_document"" class=" modal-trigger waves-effect waves-light btn-small green">Прикрепить
+                        документ</a>
+                </div>
             </div>
         </div>
     </div>
@@ -352,30 +386,34 @@
             <div class="row" style="margin-bottom: 0">
                 <div class="col s6 right" style="text-align: right; margin: auto">
                     <span class="white-text" style="vertical-align: middle">
-              Служба поддержки: 8-800-500-74-78 (по России)<br>
-              Обращение в тех. поддержку:
-              <a class="alink" href="mailto:egisz@rt-eu.ru">
-              egisz@rt-eu.ru
-              </a>  |   
-              <a class="alink" href="https://support.egisz.rosminzdrav.ru" target="_blank">
-                ЕГИСЗ.РФ
-              </a>
-              <br> © 2016-2020 Министерство здравоохранения Российской Федерации
-            </span>
+                        Служба поддержки: 8-800-500-74-78 (по России)<br>
+                        Обращение в тех. поддержку:
+                        <a class="alink" href="mailto:egisz@rt-eu.ru">
+                            egisz@rt-eu.ru
+                        </a> |
+                        <a class="alink" href="https://support.egisz.rosminzdrav.ru" target="_blank">
+                            ЕГИСЗ.РФ
+                        </a>
+                        <br> © 2016-2020 Министерство здравоохранения Российской Федерации
+                    </span>
                 </div>
                 <div class="col s6">
                     <span style="vertical-align:middle">
-              <a href="https://support.egisz.rosminzdrav.ru/index.php?/Knowledge/List/Index/62" target="_blank" class="alink">Описание системы</a>
-              <br>
-              <a href="https://support.egisz.rosminzdrav.ru/index.php?/Knowledge/List/Index/70" target="_blank" class="alink">Часто задаваемые вопросы</a>
-              <br>
-              <a href="https://portal.egisz.rosminzdrav.ru/materials" target="_blank" class="alink">Нормативно-правовые документы и руководства пользователя</a>
-            </span>
+                        <a href="https://support.egisz.rosminzdrav.ru/index.php?/Knowledge/List/Index/62"
+                            target="_blank" class="alink">Описание системы</a>
+                        <br>
+                        <a href="https://support.egisz.rosminzdrav.ru/index.php?/Knowledge/List/Index/70"
+                            target="_blank" class="alink">Часто задаваемые вопросы</a>
+                        <br>
+                        <a href="https://portal.egisz.rosminzdrav.ru/materials" target="_blank"
+                            class="alink">Нормативно-правовые документы и руководства пользователя</a>
+                    </span>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/vmp_talon.js"></script>
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.js"></script>
